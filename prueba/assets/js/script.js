@@ -3,6 +3,8 @@ var form = document.getElementById('formulario');
 var editarButton = document.getElementById('editar');
 var eliminarButton = document.getElementById('eliminar');
 var guardarButton = document.getElementById('guardar');
+var editarRegistroIndex = -1;
+var eliminarRegistroIndex = -1;
 var tabla = document.getElementById('tabla');
 var registros = []; //el código establece referencias a elementos HTML específicos en el documento utilizando sus ID, 
                     //y crea una variable para almacenar registros
@@ -274,18 +276,133 @@ function cargarRegistro(index) {
   guardarButton.value = 'Actualizar';
 }
 
-function eliminarRegistro() {
-  // Bloquear los campos del formulario
-  document.getElementById('nombre').disabled = true;
-  document.getElementById('apellido').disabled = true;
-  document.getElementById('edad').disabled = true;
-  document.getElementById('contrasena').disabled = true;
-  document.getElementById('ciudad1').disabled = true;
-  document.getElementById('ciudad2').disabled = true;
-  document.getElementById('fecha_nacimiento').disabled = true;
-  document.getElementById('genero').disabled = true;
-  document.getElementById('correo').disabled = true;
-  document.getElementById('robot').disabled = true;
+
+
+
+function editarRegistro(index) {
+  var registro = registros[index];
+
+  document.getElementById('nombre').value = registro.nombre;
+  document.getElementById('apellido').value = registro.apellido;
+  document.getElementById('edad').value = registro.edad;
+  document.getElementById('contrasena').value = registro.contrasena;
+  document.getElementById(registro.ciudad).checked = true;
+  document.getElementById('fecha_nacimiento').value = registro.fechaNacimiento;
+  document.getElementById('genero').value = registro.genero;
+  document.getElementById('correo').value = registro.correo;
+  document.getElementById('robot').checked = registro.robot;
+
+  editarRegistroIndex = index;
+}
+
+function eliminarRegistro(index) {
+  if (index === eliminarRegistroIndex) {
+    // Eliminar registro
+    registros.splice(index, 1);
+    limpiarFormulario();
+    eliminarRegistroIndex = -1;
+  } else {
+    // Marcar registro para eliminar
+    var registro = registros[index];
+    document.getElementById('nombre').value = registro.nombre;
+    document.getElementById('apellido').value = registro.apellido;
+    document.getElementById('edad').value = registro.edad;
+    document.getElementById('contrasena').value = registro.contrasena;
+    document.getElementById(registro.ciudad).checked = true;
+    document.getElementById('fecha_nacimiento').value = registro.fechaNacimiento;
+    document.getElementById('genero').value = registro.genero;
+    document.getElementById('correo').value = registro.correo;
+    document.getElementById('robot').checked = registro.robot;
+    eliminarRegistroIndex = index;
+
+    // Desactivar los campos de entrada
+document.querySelectorAll('input').forEach(function(input) {
+  input.disabled = true;
+});
+  }
+
+  actualizarTabla();
+}
+
+// Limpiar el formulario
+limpiarFormulario();
+
+// Activar los campos de entrada
+document.querySelectorAll('input').forEach(function(input) {
+  input.disabled = false;
+});
+
+// Volver a activar los campos de entrada
+activarCampos();
+
+function actualizarTabla() {
+  var tbody = document.querySelector('#tabla tbody');
+  tbody.innerHTML = '';
+
+  for (var i = 0; i < registros.length; i++) {
+    var registro = registros[i];
+
+    var row = document.createElement('tr');
+    var nombreCell = document.createElement('td');
+    var apellidoCell = document.createElement('td');
+    var edadCell = document.createElement('td');
+    var contrasenaCell = document.createElement('td');
+    var ciudadCell = document.createElement('td');
+    var fechaNacimientoCell = document.createElement('td');
+    var generoCell = document.createElement('td');
+    var correoCell = document.createElement('td');
+    var robotCell = document.createElement('td');
+    var accionesCell = document.createElement('td');
+    var editarButton = document.createElement('button');
+    var eliminarButton = document.createElement('button');
+
+    nombreCell.textContent = registro.nombre;
+    apellidoCell.textContent = registro.apellido;
+    edadCell.textContent = registro.edad;
+    contrasenaCell.textContent = registro.contrasena;
+    ciudadCell.textContent = registro.ciudad;
+    fechaNacimientoCell.textContent = registro.fechaNacimiento;
+    generoCell.textContent = registro.genero;
+    correoCell.textContent = registro.correo;
+    robotCell.textContent = registro.robot ? 'Sí' : 'No';
+
+    editarButton.textContent = 'Editar';
+    editarButton.addEventListener('click', (function(index) {
+      return function() {
+        editarRegistro(index);
+      }
+    })(i));
+
+    eliminarButton.textContent = eliminarRegistroIndex === i ? 'Eliminar Confirmar' : 'Eliminar';
+    eliminarButton.addEventListener('click', (function(index) {
+      return function() {
+        eliminarRegistro(index);
+      }
+    })(i));
+
+    accionesCell.appendChild(editarButton);
+    accionesCell.appendChild(eliminarButton);
+
+    row.appendChild(nombreCell);
+    row.appendChild(apellidoCell);
+    row.appendChild(edadCell);
+    row.appendChild(contrasenaCell);
+    row.appendChild(ciudadCell);
+    row.appendChild(fechaNacimientoCell);
+    row.appendChild(generoCell);
+    row.appendChild(correoCell);
+    row.appendChild(robotCell);
+    row.appendChild(accionesCell);
+
+    tbody.appendChild(row);
+  }
+
+  if (registros.length > 0) {
+    document.getElementById('tabla').classList.remove('hidden');
+  } else {
+    document.getElementById('tabla').classList.add('hidden');
+  }
+}
 
   // Eliminar el registro del arreglo
   registros.splice(editarRegistroIndex, 1);
@@ -298,7 +415,7 @@ function eliminarRegistro() {
 
   // Actualizar la tabla
   actualizarTabla();
-}
+
 
 // Variables para el seguimiento de los registros
 var editarRegistroIndex = -1;
