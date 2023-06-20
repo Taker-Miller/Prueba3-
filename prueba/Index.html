@@ -474,45 +474,45 @@ y estamos ansiosos por recibir tus comentarios.</p>
   <form id="formulario" action="/submit-form" method="POST">
     <!-- Campos del formulario... -->
     <div>
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" class="required" placeholder="Ingresa Tu Nombre...">
+      <label class="medium" for="nombre">Nombre:</label>
+      <input type="text" id="nombre" class="required, medium" placeholder="Ingresa Tu Nombre...">
     </div>
     <div>
-      <label for="apellido">Apellido:</label>
-      <input type="text" id="apellido" class="required" placeholder="Ingresa Tu Apellido...">
+      <label class="medium" for="apellido">Apellido:</label>
+      <input type="text" id="apellido" class="required, medium" placeholder="Ingresa Tu Apellido...">
     </div>
     <div>
-      <label for="edad">Edad:</label>
-      <input type="number" id="edad" class="required" placeholder="Ingresa Tu edad">
+      <label class="medium" for="edad">Edad:</label>
+      <input  type="number" id="edad" class="required, medium"  placeholder="Ingresa Tu edad"  >
     </div>
     <div>
-      <label for="contrasena">Contraseña:</label>
-      <input type="password" id="contrasena" class="required" placeholder="Ingresa Una Contraseña...">
+      <label class="medium" for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" class="required, medium" placeholder="Ingresa Una Contraseña...">
     </div>
     <div>
-      <label for="ciudad">Ciudad:</label>
-      <input type="radio" id="ciudad1" name="ciudad" value="ciudad1" class="required" required> Copiapó
-      <input type="radio" id="ciudad2" name="ciudad" value="ciudad2" class="required" required> Caldera
+      <label class="medium" for="ciudad">Ciudad:</label>
+      <input type="radio" id="ciudad1" name="ciudad" value="ciudad1" class="required, medium" required> <p class="medium">Copiapó</p>
+      <input type="radio" id="ciudad2" name="ciudad" value="ciudad2" class="required, medium" required> <p class="medium">Caldera</p> 
     </div>
     <div>
-      <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-      <input type="date" id="fecha_nacimiento" class="required">
+      <label class="medium" for="fecha_nacimiento">Fecha de Nacimiento:</label>
+      <input type="date" id="fecha_nacimiento" class="required, medium">
     </div>
     <div>
-      <label for="genero">Género:</label>
-      <select id="genero" class="required">
-        <option value="">Seleccione</option>
-        <option value="masculino">Masculino</option>
-        <option value="femenino">Femenino</option>
+      <label class="medium" for="genero">Género:</label>
+      <select id="genero" class="required, medium">
+        <option class="medium" value="">Seleccione</option>
+        <option class="medium" value="masculino">Masculino</option>
+        <option class="medium" value="femenino">Femenino</option>
       </select>
     </div>
     <div>
-      <label for="correo">Correo Electrónico:</label>
-      <input type="email" id="correo" class="required" placeholder="Ingresa Tu Correo Electrónico...">
+      <label class="medium" for="correo">Correo Electrónico:</label>
+      <input type="email" id="correo" class="required, medium" placeholder="Ingresa Tu Correo Electrónico...">
     </div>
     <div>
-      <label for="robot">No soy un robot:</label>
-      <input type="checkbox" id="robot" class="required">
+      <label class="medium" for="robot">No soy un robot:</label>
+      <input type="checkbox" id="robot" class="required, medium">
     </div>
 
     <input type="submit" id="guardar" value="Guardar">
