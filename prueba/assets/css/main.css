@@ -1,0 +1,772 @@
+
+/*TABLA*/
+.hidden {
+  display: none;
+}
+
+#tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #33567f;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/*FIN TABLA */
+
+
+/*CONTRASTE*/
+
+#DivContraste {
+  background-color: #6d6d6d;
+}
+
+.high-contrast #tabla {
+  background-color:#0d364e
+}
+
+.high-contrast #DivContraste {
+  background-color: #193d3d;
+}
+
+
+
+
+.high-contrast #formulario {
+  background-color: #151236;
+}
+
+.contraste {
+  background-color: black;
+  color: white;
+}
+
+
+.high-contrast #formulario {
+  background-color: #0d1818;
+}
+
+.high-contrast label {
+  color: rgb(169, 18, 129);
+}
+
+
+
+/* Estilos de tabla en modo de contraste */
+.contraste table,
+.high-contrast table {
+  background-color: #123413;
+  color: rgb(169, 18, 129);
+}
+
+.high-contrast footer {
+  background-color: #0f3e3e;
+}
+
+.contraste h1 {
+  color: white;
+}
+
+.contraste label,
+.contraste input,
+.contraste select,
+.contraste input[type="submit"] {
+  color: white;
+}
+
+.contraste table,
+.contraste th,
+.contraste td {
+  color: white;
+}
+
+
+ /* Regla adicional para cambiar el color del texto en modo de alto contraste */
+ .high-contrast p,
+ .high-contrast li, 
+ .high-contrast  h3,
+ .high-contrast h2,
+ .high-contrast a,
+ .high-contrast button{
+   color: rgb(169, 18, 129);
+ }
+
+ .high-contrast #formulario input[type="text"],
+.high-contrast #formulario input[type="number"],
+.high-contrast #formulario input[type="date"],
+.high-contrast #formulario input[type="email"],
+.high-contrast #formulario input[type="password"],
+.high-contrast #formulario input[type="checkbox"],
+.high-contrast #formulario select {
+  border: 1px solid #0c5b24;
+  background-color: #0b0c26;
+  color: rgb(169, 18, 129);
+}
+
+
+ .high-contrast .box {
+  background-color: rgb(13, 23, 33);
+}
+
+.high-contrast label {
+  color: rgb(169, 18, 129);
+}
+
+
+
+
+/*FUENTES*/
+.small {
+  font-size: 9px;
+}
+
+.medium {
+  font-size: 15px;
+}
+
+.large {
+  font-size: 40px;
+}
+
+
+
+
+
+/*PAGINA EN SI*/
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #717171;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+input[type="checkbox"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+/**/
+
+
+
+
+.body {
+  background-color: rgb(135, 135, 135);
+}
+
+.columna1 {
+  padding: 0 20px;
+  margin: 0 10px;
+  color: white;
+  border-style: solid;
+
+}
+
+.columna2 {
+      padding: 0 20px;
+      margin: 0 10px;
+      color: white;
+      border-style: solid;
+}  
+
+.columna3 {
+      padding: 0 20px;
+      margin: 0 10px;
+      color: white;
+      border-style: solid;
+}
+
+  /*ERROR*/
+    .error {
+      border: 2px solid red;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 0.8em;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 0.8em;
+      font-family: Arial, sans-serif; /* Fuente predeterminada */
+    }
+    
+    /* Estilos para la fuente alternativa */
+    .high-contrast .error-message {
+      font-family: Times New Roman, serif; /* Fuente alternativa en modo de alto contraste */
+    }
+
+    input.error {
+      border-color: red; /* Estilo de borde rojo para los inputs en error */
+    }
+
+.columna4 {
+  padding: 25px;
+  margin: 0 10px;
+  color: white;
+  border-style: solid;
+}
+
+.columna5 {
+  padding: 25px;
+  margin: 0 10px;
+  color: white;
+  border-style: solid;
+}
+
+.columna6 {
+  padding: 25px;
+  margin: 0 10px;
+  color: white;
+  border-style: solid;
+}
+
+.columna7 {
+  padding: 25px;
+  margin: 0 10px;
+  color: white;
+  border-style: solid;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+.box {
+  background-color: #1a77ad;
+  border-style: solid;
+ 
+}
+
+
+  
+
+
+.box1 {
+  background-color: #0367a1;
+  
+
+}
+
+
+
+.item {
+  color: #ffffff;
+  float: left;
+  padding-left: 22px;
+  box-sizing: border-box;
+}
+.image {
+  width: 900px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.h1, h2{
+  margin-top: 0;
+  text-align: center;
+}
+
+.h1s {
+  color: white;
+  font-size: 45px;
+}
+
+.h2s{
+  margin-top: 0;
+  text-align: center;
+  font-family:cursive;
+ 
+  
+}
+
+
+
+
+
+
+.image {
+  width: 500px;
+
+  
+}
+
+.image1 {
+  width: 500px;
+  height: 283px;
+}
+
+.image2 {
+  width: 500px;
+  height: 284px;
+}
+
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: green;
+}
+
+.nav {
+  
+  background-color: #0367a1;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+
+
+}
+
+
+
+
+
+
+
+.container {
+  text-align: left;
+}
+
+.image {
+  float: left;
+  margin-right: 10px;
+  max-width: 500px; /* Ajusta el tamaño máximo de la imagen según tu preferencia */
+  max-height: 500px; /* Ajusta el tamaño máximo de la imagen según tu preferencia */
+}
+
+
+
+.description {
+  margin-top: 5px;
+}
+
+
+
+
+
+ul li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.ul2 {
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+ color: rgb(255, 255, 255);
+  width: 1200px;
+  height: 560px;
+  
+  
+}
+
+
+
+
+
+
+
+
+
+.pe {
+  display: flex;
+  justify-content: left;
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
+.logo {
+  display: flex;
+  width: 100px;
+  height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.img1 {
+  width: 250px;
+  height: 250px;
+}
+
+.img2 {
+  width: 300px;
+  height: 260px;
+}
+
+.imagen1 {
+  width: 345px;
+  height: 260px;
+}
+
+.img3 {
+  width: 250px;
+  height: 250px;
+}
+
+
+
+/*.footer {
+ margin: 0;
+  height: 370px;
+ background-color: #314652;
+  background-position: center;
+  background-size: cover;
+  padding: 0px;
+  font-family: sans-serif;
+}
+
+*/
+
+
+footer {
+  background-color:#6d6d6d;
+  padding: 10px;
+  text-align: center;
+  height: 370px;
+}
+
+
+
+
+
+.buttons {
+  min-width: 700px;
+  display: flex;
+  justify-content: space-around;
+}
+.buttons a {
+  text-decoration: none;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: #314652;
+  color:#f1f1f1;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all .4s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1 {
+  text-align: center;
+}
+
+
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+input[type="checkbox"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+
+h1 {
+  text-align: center;
+}
+
+
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+
+/* Estilos adicionales para el formulario */
+#formulario {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #b5b2b2;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+}
+
+#formulario label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#formulario input[type="text"],
+#formulario input[type="number"],
+#formulario input[type="date"],
+#formulario input[type="email"],
+#formulario input[type="password"],
+#formulario input[type="checkbox"],
+#formulario select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background-color: #c7c7c7;
+  color: #000000;
+}
+
+#formulario input[type="checkbox"] {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+#formulario input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btnForm {
+  width: 100%;
+  padding: 12px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* */
+
+
+
+.mapa {
+  margin-top: 25px;
+  margin-bottom: 100px;
+
+      color: rgb(0, 0, 0);
+      padding: 10px;
+      text-align:center;
+      background-position: center;
+      font-family: sans-serif;
+      background-size: cover;
+}
+
+.buttons a:hover {
+  transform: scale(1.2);
+}
+
+
+
+.image5 {
+  display: flex;
+  text-decoration: none;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: #314652;
+  color:#f1f1f1;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all .4s ease-in-out;
+}
+
+.jota {
+  text-align: left;
+  margin-top: auto;
+}
+
+
+
+.col-lg{
+  max-width: 33.33333%;
+}
+
+
+body {
+  background-color: white;
+  color: black;
+}
+
+.high-contrast {
+  background-color: black;
+  color: white;
+}
+
+
+
+
