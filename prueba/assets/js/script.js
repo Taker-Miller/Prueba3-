@@ -293,7 +293,10 @@ function editarRegistro(index) {
   document.getElementById('robot').checked = registro.robot;
 
   editarRegistroIndex = index;
-}
+} //La función editarRegistro trabaja con un arreglo llamado registros, el cual contiene una lista de registros. 
+  //El parámetro index que se pasa a la función indica el índice del registro específico que se desea editar en ese arreglo
+
+
 
 function eliminarRegistro(index) {
   if (index === eliminarRegistroIndex) {
@@ -371,7 +374,8 @@ function actualizarTabla() {
       return function() {
         editarRegistro(index);
       }
-    })(i));
+    })(i)); //la función actualizarTabla recorre el arreglo registros y crea filas y celdas en una tabla HTML con los datos de cada registro. 
+            //También añade un botón de editar para cada registro que invoca la función editarRegistro con el índice correspondiente.
 
     eliminarButton.textContent = eliminarRegistroIndex === i ? 'Eliminar Confirmar' : 'Eliminar';
     eliminarButton.addEventListener('click', (function(index) {
@@ -395,7 +399,9 @@ function actualizarTabla() {
     row.appendChild(accionesCell);
 
     tbody.appendChild(row);
-  }
+  } //se encarga de crear y configurar los botones de editar y eliminar en cada fila de la tabla generada por la función actualizarTabla. 
+    //Además, se establecen los eventos de clic para cada botón, 
+    //invocando las funciones correspondientes (editarRegistro y eliminarRegistro) con los índices adecuados.
 
   if (registros.length > 0) {
     document.getElementById('tabla').classList.remove('hidden');
