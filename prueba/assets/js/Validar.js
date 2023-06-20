@@ -1,4 +1,4 @@
-function validarCampos() {
+}function validarCampos() {
     limpiarErrores();
     var camposValidos = true;
   
